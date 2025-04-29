@@ -1,6 +1,14 @@
-def BePolite(text):
-  return text + "ครับ"
+nouns = ['lion', 'tiger', 'bass', 'cup']
 
-user_input = input("โปรดระบุข้อความ = ")
+def convert_to_plural(word):
+  if word[-1] == "s":
+    return word + "es"
+  else:
+    return word + "s"
 
-print(BePolite(user_input))
+plural = []
+for noun in nouns:
+  plural.append(convert_to_plural(noun))
+
+
+print(plural)
