@@ -1,14 +1,19 @@
-nouns = ['lion', 'tiger', 'bass', 'cup']
+from pythainlp.tokenize import word_tokenize
 
-def convert_to_plural(word):
-  if word[-1] == "s":
-    return word + "es"
-  else:
-    return word + "s"
+# Thai sentence for testing
+text = "ฉันรักภาษาไทยและการประมวลผลภาษาธรรมชาติ"
 
-plural = []
-for noun in nouns:
-  plural.append(convert_to_plural(noun))
+# Available engines to compare
+engines = ["newmm", "longest", "icu", "deepcut"]
 
+print(f"Original text:\n{text}\n")
 
-print(plural)
+for engine in engines:
+    try:
+        tokens = word_tokenize(text, engine=engine)
+        print(f"Engine: {engine}")
+        print(tokens)
+        print()
+    except Exception as e:
+        print(f"Engine: {engine} ❌ Error: {e}")
+        print()
