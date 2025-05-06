@@ -1,7 +1,7 @@
 from pythainlp.tokenize import word_tokenize
 
 # Thai sentence for testing
-text = "ฉันรักภาษาไทยและการประมวลผลภาษาธรรมชาติ"
+text = "กรวดน้ำ"
 
 # Available engines to compare
 engines = ["newmm", "longest", "icu", "deepcut"]
