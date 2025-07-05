@@ -1,6 +1,11 @@
 import numpy as np
 
-a = np.array([[1,2,3,4],
-              [5,6,7,8]])
+a = np.array([["a","b","c","d"],
+              ["e","f","g","h"],
+              ["i","j","k","l"],
+              ["m","n","o","p"]])
 
-print(a>3)
+w = np.hsplit(a,4)
+
+
+print(w)
