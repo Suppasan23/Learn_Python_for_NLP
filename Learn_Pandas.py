@@ -1,9 +1,17 @@
 import pandas as pd
 
-items = {30:'Mango',10:'Banana',90:'Grape'}
+name = ["คีย์บอร์ด","เมาส์","ตุ๊กตา"]
+category = ["อุปกรณ์คอม","อุปกรณ์คอม","ของเล่น"]
+price = [500,300,900]
 
-ps_items = pd.Series(items)
+s_name = pd.Series(name)
+s_category = pd.Series(category)
+s_price = pd.Series(price)
 
-print(ps_items)
+frame = {"ชื่อสินค้า":s_name,"หมวดหมู่":s_category,"ราคา":s_price}
 
-print(ps_items[10])
+df = pd.DataFrame(frame)
+
+print(df)
+
+df.to_csv("pandas_products.csv")
