@@ -1,7 +1,7 @@
 import pandas as pd
-import numpy as np
 
-x = np.arange('2025-02','2025-03', dtype='datetime64[D]')
+cols = [0,2]
 
+df_Zoo = pd.read_csv("Zoo.csv", encoding="utf-8", usecols=cols)
 
-print(x)
+print(df_Zoo)
