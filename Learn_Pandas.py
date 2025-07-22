@@ -1,7 +1,6 @@
-import pandas as pd
+import pandas 
 
-cols = [0,2]
+fruits_list = ['Apple', 10, 'Orange', 55.50]
+fruits_df = pandas.DataFrame(fruits_list)
 
-df_Zoo = pd.read_csv("Zoo.csv", encoding="utf-8", usecols=cols)
-
-print(df_Zoo)
+print(fruits_df)
