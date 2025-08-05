@@ -3,8 +3,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # โหลดไฟล์ Excel
-df = pd.read_excel("data/Stock.xlsx",index_col="Name")
+df = pd.read_excel("data\Employee.xlsx")
 
-df["total"] = df["Price"]*df["Amount"]
+print(df)
 
-print(df.sum())
+df = df.dropna(axis="columns")
+
+print(df)
