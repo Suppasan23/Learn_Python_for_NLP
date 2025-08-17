@@ -1,14 +1,17 @@
-import sympy
-from sympy import symbols, pretty_print, solve, expand, simplify, factor, diff, cos, sin
+from sympy import *
 
-x, y = symbols("x y")
+x, y, z = symbols("x y z")
 
-expr1 = 2*x + 5
-expr2 = x**3
-expr3 = (x**2)*(y**2)
-expr4 = x**4 + 3*x**2 + 9*x + 7
-expr5 = cos(x)
-expr6 = sin(y)
-expr7 = sin(x)*cos(y)
+#ข้อ 4.1
+print("━━━━━━━━━━ข้อ 4.1━━━━━━━━━")
+expr11 = Eq(x + y , 2)
+expr12 = Eq(2*x + y , 0)
+expr1112_solve = solve((expr11, expr12),(x, y))
 
-print(diff(expr2, x, x, x))
+""" pretty_print(expr1112_solve) """
+pretty_print(dotprint(x+2))
+
+
+
+
+
